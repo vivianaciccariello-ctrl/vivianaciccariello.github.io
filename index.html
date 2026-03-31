@@ -4,83 +4,123 @@
 <head>
     <meta charset="UTF-8">
     <title>Viviana Ciccariello - Estética y Bienestar</title>
-
-    <meta name="description" content="Peluquería unisex y estética en Balneario San Luis. Cortes, color, alisados, tratamientos capilares y depilación láser definitiva.">
-    <meta name="keywords" content="peluquería San Luis, estética San Luis, depilación láser San Luis, alisados, color, Viviana Ciccariello">
-    <meta name="author" content="Viviana Ciccariello">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="encabezado">
-        <h1>Viviana Ciccariello</h1>
-        <p class="subtitulo">Estética y Bienestar.</p>
-        <img src="img/logo.transparente.png" alt="logo" class="logo">
+<!-- ENCABEZADO -->
+<header class="header">
+    <div class="logo-titulo">
+        <img src="img/logo.transparente.png" alt="Logo" class="logo">
+        <div class="texto-encabezado">
+            <h1>Viviana Ciccariello</h1>
+            <p class="subtitulo">Estética y Bienestar</p>
+        </div>
     </div>
+
+    <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="sobremi.html">Sobre mí</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    </header>
+    
+
+
+
+
+<!-- SLIDER -->
 <div class="slider">
-    <img class="slide" src="img/foto1.png" alt="Foto 1">
-    <img class="slide" src="img/foto2.png" alt="Foto 2">
+
+    <div class="slide fade">
+        <img src="img/foto1.png" alt="Tratamientos capilares">
+        <div class="texto-slide">
+            <h2>Peluquería y tratamientos capilares</h2>
+            <p>Cortes, color, nutrición, hidratación y reparación capilar.</p>
+            <a href="servicios.html" class="boton">Ver servicios</a>
+        </div>
+    </div>
+
+    <div class="slide fade">
+        <img src="img/foto2.png" alt="Depilación láser">
+        <div class="texto-slide">
+            <h2>Depilación láser definitiva</h2>
+            <p>Tecnología avanzada para una piel suave y cuidada.</p>
+            <a href="laser.html" class="boton">Agendar hora</a>
+        </div>
+    </div>
+
+    <div class="slide fade">
+        <img src="img/masajes1.png" alt="Masajes">
+        <div class="texto-slide">
+            <h2>Masajes</h2>
+            <p>Relajación, alivio muscular y bienestar.</p>
+            <a href="masajes.html" class="boton">Ver masajes</a>
+        </div>
+    </div>
 
     <button class="prev" onclick="moverSlide(-1)">❮</button>
     <button class="next" onclick="moverSlide(1)">❯</button>
+
 </div>
-  <ul>
-    <li><a href="sobremi.html">Sobre mí</a></li>
-    <li><a href="servicios.html">Servicios</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
 
-<h2>Trabajamos con marcas profesionales</h2>
-<p class="texto-web">
-En Viviana Ciccariello Estética y Bienestar ofrecemos servicios de peluquería unisex en Balneario San Luis. 
-Realizamos cortes, coloración, alisados, tratamientos capilares y depilación láser definitiva. 
-Trabajamos con productos profesionales como L'Oréal, Kérastase, Revlon y Redken. 
-Brindamos atención personalizada en un espacio pensado para tu bienestar, belleza y cuidado de la piel y el cabello.
-</p>
+<h2 class="titulo-seccion">Nuestros servicios</h2>
 
-
-<div class="marcas">
-    <img src="img/foto1.png" alt="Marcas"
-    style="width: 300px; height: auto;">
+<div class="servicios-inicio">
+    <div class="servicio-box">
+        <h3>Peluquería</h3>
+        <p>Cortes, color, nutrición, hidratación y reparación capilar.</p>
+        <a href="servicios.html" class="boton">Ver servicios</a>
     </div>
-   
- <h2><a href="laser.html">Depilación láser definitiva</a></h2>
-<div class="">
-    <img src="img/foto2.png" alt="Depilación láser"
-    style="width: 300px; height: auto;">
+
+    <div class="servicio-box">
+        <h3>Depilación láser</h3>
+        <p>Depilación definitiva con tecnología SHR, rápida y segura.</p>
+        <a href="laser.html" class="boton">Ver depilación</a>
+    </div>
+
+    <div class="servicio-box">
+        <h3>Masajes</h3>
+        <p>Relajación, descontracturantes, drenaje linfático y bienestar.</p>
+        <a href="masajes.html" class="boton">Ver masajes</a>
+    </div>
 </div>
 
-<h2>Algunos trabajos</h2>
 
-<div class="galeria-inicio">
- <img src="img/trabajo1.png" alt="Trabajo" style="width: 250px; height: 300px; object-fit: cover;">
-<img src="img/trabajo2.png" alt="Trabajo" style="width: 250px; height: 300px; object-fit: cover;">
-<img src="img/trabajo4.png" alt="Trabajo" style="width: 250px; height: 300px; object-fit: cover;">
-</div>
 
+
+<!-- BOTON WHATSAPP -->
 <a href="https://wa.me/59895919333?text=Hola%20quiero%20agendar%20un%20turno" class="whatsapp-float">WhatsApp</a>
 
+<!-- SCRIPT SLIDER -->
 <script>
-let slideIndex = 0;
-mostrarSlide();
-
-function mostrarSlide() {
-    let slides = document.getElementsByClassName("slide");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }
-    slides[slideIndex - 1].style.display = "block";
-}
+let slideIndex = 1;
+mostrarSlide(slideIndex);
 
 function moverSlide(n) {
-    slideIndex += n - 1;
-    mostrarSlide();
+    mostrarSlide(slideIndex += n);
+}
+
+function mostrarSlide(n) {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex-1].style.display = "block";
 }
 </script>
+
 </body>
 </html>

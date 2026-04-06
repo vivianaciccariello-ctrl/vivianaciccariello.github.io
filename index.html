@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Viviana Ciccariello - Estética y Bienestar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Peluquería y estética en San Luis, Canelones. Depilación definitiva, tratamientos capilares, masajes relajantes y estética facial. Viviana Ciccariello Estética y Bienestar.">
+
+<meta name="keywords" content="peluquería San Luis, estética San Luis, depilación definitiva San Luis, masajes San Luis, tratamientos capilares San Luis, Viviana Ciccariello">
+
+<meta name="author" content="Viviana Ciccariello">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ENCABEZADO -->
+<header class="header">
+    <div class="logo-titulo">
+        <img src="img/logo.transparente.png" alt="Logo" class="logo">
+        <div class="texto-encabezado">
+            <h1>Viviana Ciccariello</h1>
+            <p class="subtitulo">Estética y Bienestar</p>
+        </div>
+    </div>
+
+    <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="sobremi.html">Sobre mí</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    </header>
+    
+
+
+
+
+<!-- SLIDER -->
+<div class="slider">
+
+    <div class="slide fade">
+        <img src="img/foto1.png" alt="Tratamientos capilares">
+        <div class="texto-slide">
+            <h2>Peluquería y tratamientos capilares</h2>
+            <p>Cortes, color, nutrición, hidratación y reparación capilar.</p>
+            <a href="servicios.html" class="boton">Ver servicios</a>
+        </div>
+    </div>
+
+    <div class="slide fade">
+        <img src="img/foto2.png" alt="Depilación láser">
+        <div class="texto-slide">
+            <h2>Depilación láser definitiva</h2>
+            <p>Tecnología avanzada para una piel suave y cuidada.</p>
+            <a href="laser.html" class="boton">Agendar hora</a>
+        </div>
+    </div>
+
+    <div class="slide fade">
+        <img src="img/masajes1.png" alt="Masajes">
+        <div class="texto-slide">
+            <h2>Masajes</h2>
+            <p>Relajación, alivio muscular y bienestar.</p>
+            <a href="masajes.html" class="boton">Ver masajes</a>
+        </div>
+    </div>
+
+    <button class="prev" onclick="moverSlide(-1)">❮</button>
+    <button class="next" onclick="moverSlide(1)">❯</button>
+
+</div>
+
+<h2 class="titulo-seccion">Nuestros servicios</h2>
+
+<div class="servicios-inicio">
+    <div class="servicio-box">
+        <h3>Peluquería</h3>
+        <p>Cortes, color, nutrición, hidratación y reparación capilar.</p>
+        <a href="servicios.html" class="boton">Ver servicios</a>
+    </div>
+
+    <div class="servicio-box">
+        <h3>Depilación láser</h3>
+        <p>Depilación definitiva con tecnología SHR, rápida y segura.</p>
+        <a href="laser.html" class="boton">Ver depilación</a>
+    </div>
+
+    <div class="servicio-box">
+        <h3>Masajes</h3>
+        <p>Relajación, descontracturantes, drenaje linfático y bienestar.</p>
+        <a href="masajes.html" class="boton">Ver masajes</a>
+    </div>
+</div>
+
+<h2 class="titulo-seccion">Estética y bienestar en San Luis</h2>
+
+<p>
+En Viviana Ciccariello Estética y Bienestar trabajamos para que cada persona se sienta bien consigo misma, combinando estética, salud y bienestar. 
+Ofrecemos servicios de peluquería, tratamientos capilares, depilación definitiva con tecnología SHR, masajes relajantes, descontracturantes, drenaje linfático y otros. 
+Brindamos atención personalizada en San Luis, Canelones, en un espacio pensado para tu cuidado, tu descanso y tu belleza.
+</p>
+
+
+
+<!-- BOTON WHATSAPP -->
+<a href="https://wa.me/59895919333?text=Hola%20quiero%20agendar%20un%20turno" class="whatsapp-float">WhatsApp</a>
+
+<!-- SCRIPT SLIDER -->
+<script>
+let slideIndex = 1;
+mostrarSlide(slideIndex);
+
+function moverSlide(n) {
+    mostrarSlide(slideIndex += n);
+}
+
+function mostrarSlide(n) {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex-1].style.display = "block";
+}
+</script>
+
+</body>
+</html>
+<footer class="footer">
+    <p>Viviana Ciccariello - Estética y Bienestar</p>
+    <p>San Luis, Canelones</p>
+    <p>Tel: 095 919 333</p>
+    <p>Instagram: @viviana.ciccariello</p>
+    <p>© 2026 Todos los derechos reservados</p>
+</footer>

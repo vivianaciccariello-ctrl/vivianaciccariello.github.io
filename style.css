@@ -61,6 +61,8 @@ body {
 /* MENU */
 .menu {
     display:flex;
+    justify-content: flex-end;
+    align-items: center;
     background-color: transparent;
     padding: 0;
     border: none;
@@ -1255,4 +1257,72 @@ p {
     .footer {
         padding: 25px 15px;
     }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* ARREGLO FINAL MASAJES CELULAR */
+.masajes {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.tipo-masaje {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 35px auto;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 18px;
+  max-width: 900px;
+  box-sizing: border-box;
+}
+
+.tipo-masaje img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.texto-masaje {
+  flex: 1;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .masajes {
+    padding: 35px 15px;
+  }
+
+  .tipo-masaje {
+    display: block;
+    width: 100%;
+    padding: 22px;
+    margin: 25px auto;
+    text-align: center;
+  }
+
+  .tipo-masaje img {
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+
+  .texto-masaje {
+    width: 100%;
+    text-align: center;
+  }
+
+  .texto-masaje p {
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+  }
 }
